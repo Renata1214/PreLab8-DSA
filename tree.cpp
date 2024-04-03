@@ -23,6 +23,7 @@ Node* Node::Acker (int x, int y){
             Node* tree_node = create_node_leave(ackerval);
             tree_node->root= this;
             left = tree_node;
+            cout << "The ultimate value is " << ackerval << endl;
             return left;
         }
         else if (y==0){
@@ -45,7 +46,6 @@ Node* Node::Acker (int x, int y){
 }
 
 //Printing function
-
 
 
 //Functions to create Nodes

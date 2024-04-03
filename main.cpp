@@ -14,10 +14,16 @@ Node* temporal;
 temporal= &mynode1;
 
 while (temporal->ackerval==-10){
-    temporal = temporal->right;
+    if (temporal->right != nullptr){
+        temporal = temporal->right;
+        cout << temporal -> x << " , " << temporal -> y << endl;
+    }
+    else {
+        break;
+    }
 }
 
-cout << mynode1.ackerval << endl;
+cout << temporal->ackerval << endl;
 
 return 0;
 
