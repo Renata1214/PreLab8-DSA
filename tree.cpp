@@ -68,6 +68,7 @@ Node* Node::Acker (int x, int y){
 void print (Node* nodeval){
    
         if (nodeval->left== nullptr && nodeval->right==nullptr){
+            
             return;
         }
         if (nodeval->left != nullptr){
