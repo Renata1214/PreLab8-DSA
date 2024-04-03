@@ -16,12 +16,28 @@ Node::Node (){
 // int Node::allNodes =0;
 int Node::idsum=0;
 
+//Functions to create Nodes
+Node* create_node (int m, int n){
+    Node* mynode = new Node();
+    mynode->x= m;
+    mynode->y=n;
+    return mynode;
+}
+
+Node* create_node_leave (int l){
+    Node* mynode = new Node();
+    mynode->ackerval=l;
+    mynode->idsum=mynode->idsum + 1;
+    mynode-> id= mynode->idsum;
+    return mynode;
+}
+
 //Acker Function
 Node* Node::Acker (int x, int y){
         if (x==0){
             //create_node_leave()
             ackerval=y+1;
-            Node* tree_node = create_node_leave(ackerval);
+            Node* tree_node = create_node_leave(ackerval); //new node ()
             tree_node->root= this;
             left = tree_node;
             //cout << "The ultimate value is " << ackerval << endl;
@@ -49,7 +65,6 @@ Node* Node::Acker (int x, int y){
 }
 
 //Printing function
-
 void print (Node* nodeval){
    
         if (nodeval->left== nullptr && nodeval->right==nullptr){
@@ -67,19 +82,4 @@ void print (Node* nodeval){
 
 }
 
-//Functions to create Nodes
-Node* create_node (int m, int n){
-    Node* mynode = new Node();
-    mynode->x= m;
-    mynode->y=n;
-    return mynode;
-}
-
-Node* create_node_leave (int l){
-    Node* mynode = new Node();
-    mynode->ackerval=l;
-    mynode->idsum=mynode->idsum + 1;
-    mynode-> id= mynode->idsum;
-    return mynode;
-}
 
