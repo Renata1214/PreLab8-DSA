@@ -36,16 +36,24 @@ Node* Node::Acker (int x, int y){
             //right
             Node* tree_node2 = create_node_leave(x-1);
             tree_node2->root= this;
+            left = tree_node2;
             //left
             Node* tree_node3 = create_node (x, y-1);
             tree_node3->root= this;
-            left = tree_node2;
+            //
             right = tree_node3;
             return tree_node3->Acker(x, y-1);
         }
 }
 
 //Printing function
+
+void print (Node* nodeval){
+
+
+
+
+}
 
 
 //Functions to create Nodes

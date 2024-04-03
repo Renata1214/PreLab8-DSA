@@ -10,10 +10,10 @@ struct Node {
     int x;
     int y;
     int ackerval;
-    static int allNodes;
+    static int allNodes; // value just to count that the number of nodes i get are the correct ones
     Node * left;
     Node * right;
-    Node * root;
+    Node * root; //Root or parent
     //Constructor
     Node ();
     //Acker Function
@@ -23,3 +23,4 @@ struct Node {
 //Functions to create Nodes
 Node* create_node (int m, int n);
 Node* create_node_leave (int l);
+void print (Node * nodeval);
