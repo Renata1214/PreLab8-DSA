@@ -3,17 +3,13 @@
 
 using namespace std;
 
-
 int main (){
-
 Node mynode1;
-mynode1.x=1;
-mynode1.y=2;
-mynode1.Acker(1,2);
+mynode1.x=3;
+mynode1.y=3;
+mynode1.Acker(3,3);
 Node* temporal;
 temporal= &mynode1;
 print (temporal);
-
 return 0;
-
 }
